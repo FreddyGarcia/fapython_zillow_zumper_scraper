@@ -7,7 +7,7 @@ import requests
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s %(name)-5s %(levelname)-8s %(message)s')
 
-HUBSPOT_KEY = ''
+HUBSPOT_KEY = '9a30206a-0b12-4934-9f59-dc4ea2503497'
 
 # This is a field mapping:
 # (zillow, hubspot)
@@ -15,7 +15,7 @@ HUBSPOT_KEY = ''
 # Add here the fields you want to take from zillow
 # and save them into hubspot
 ZILLOW = {
-    'CREDENTIALS' : {},
+    'CREDENTIALS' : {'email' : 'stlrentals1%40gmail.com', 'password' : 'H0m3v35t!'},
     'FIELDS' : (
         ('name','firstname'),
         ('email','email'),
@@ -30,7 +30,7 @@ ZILLOW = {
 }
 
 ZUMPER = {
-    'CREDENTIALS' : {},
+    'CREDENTIALS' : {'username' : 'stlrentals1@gmail.com', 'password' : 'H0m3v35t!'},
     'FIELDS' : (
         ('name','firstname'),
         ('email','email'),
