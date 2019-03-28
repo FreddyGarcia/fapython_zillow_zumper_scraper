@@ -75,3 +75,13 @@ def handle_error(exception, message):
     logging.debug(exception)
     logging.error(message)
     sys.exit()
+
+
+def check_authentication(func):
+    def wrapper(self, *args, **kwargs):
+        if not self.is_authenticated:
+            raise Exception('No autheticated')
+            return False
+        return func(self, *args, **kwargs)
+
+    return wrapper
